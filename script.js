@@ -117,7 +117,11 @@ for (let i = 0; i < fallingLeafCount; i++) {
     leaf.style.transform = `rotate(${Math.random() * 360}deg)`;
     leaf.style.opacity = '0.6';
     leaf.style.zIndex = '1';
-    document.addEventListener('DOMContentLoaded', function() {
+    
+    fallingLeaves.appendChild(leaf);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
     const galleryItems = document.querySelectorAll('.gallery-item');
     const modal = document.getElementById('galleryModal');
     const modalImage = document.getElementById('modalImage');
@@ -159,7 +163,7 @@ for (let i = 0; i < fallingLeafCount; i++) {
         }
     }
     
-   
+    
     function closeModal() {
         modal.classList.remove('active');
         document.body.style.overflow = 'auto'; 
@@ -203,7 +207,7 @@ for (let i = 0; i < fallingLeafCount; i++) {
             closeModal();
         }
         
-        // Навигация стрелками
+        
         if (modal.classList.contains('active')) {
             if (e.key === 'ArrowRight') {
                 showNext();
@@ -220,7 +224,4 @@ for (let i = 0; i < fallingLeafCount; i++) {
     
     modalImage.style.transition = 'opacity 0.3s ease';
 });
-    
-    fallingLeaves.appendChild(leaf);
 
-}
