@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дубовая Роща - лестницы из дерева и металла</title>
+     <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="leaf-curtain">
+        <div class="leaf-curtain-left">
+            <div class="leaf-pattern"></div>
+        </div>
+        <div class="leaf-curtain-right">
+            <div class="leaf-pattern"></div>
+        </div>
+    </div>
+    
+
+    <div class="falling-leaves" id="fallingLeaves"></div>
+    
+
+    <div class="interactive-leaves" id="interactiveLeaves"></div>
+    
+
+    <div class="gallery-modal" id="galleryModal">
+        <button class="modal-close" id="modalClose" aria-label="Закрыть">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="modal-nav modal-prev" id="modalPrev" aria-label="Предыдущее изображение">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="modal-nav modal-next" id="modalNext" aria-label="Следующее изображение">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="modal-content">
+            <img class="modal-image" id="modalImage" src="" alt="">
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+    
+
+    <header id="header">
+        <div class="container">
+            <div class="header-container">
+                <div class="logo">
+
+                    <img src="images/logo.png" alt="Дубовая Роща" class="logo-img">
+                    <div class="logo-text">Дубовая <span>Роща</span></div>
+                </div>
+                
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#services">Услуги</a></li>
+                        <li><a href="#materials">Материалы</a></li>
+                        <li><a href="#gallery">Наши работы</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="close-menu-btn" id="closeMenuBtn" aria-label="Закрыть меню">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#materials">Материалы</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+    
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Лестницы из дерева и металла</h1>
+                <p>Проектирование, изготовление и монтаж уникальных лестниц на заказ. Современные технологии и вековые традиции деревообработки.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Заказать проект</a>
+                    <a href="#gallery" class="btn btn-secondary">Посмотреть работы</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">О мастерской "Дубовая Роща"</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Создаем лестницы, которые становятся сердцем дома</h3>
+                    <p>Наша мастерская специализируется на проектировании и изготовлении лестниц из натурального дерева и металла уже более 15 лет. Мы сочетаем традиционные методы обработки дерева с современными технологиями металлообработки.</p>
+                    <p>Каждая лестница — это уникальный проект, созданный с учетом архитектурных особенностей помещения, стилистических предпочтений заказчика и требований безопасности.</p>
+                    <p>Мы работаем только с качественными материалами: дуб, ясень, бук, сталь, алюминий и стекло. Наши специалисты сопровождают проект от эскиза до монтажа.</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <div>Лестница "Дубовая роща"<br>Комбинация натурального дуба и кованых элементов</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Услуги -->
+    <section class="section services" id="services">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Проектирование</h3>
+                        <p>Разработка индивидуальных проектов лестниц с учетом особенностей помещения, стилистики интерьера и пожеланий заказчика. 3D-визуализация проекта.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Изготовление</h3>
+                        <p>Производство элементов лестниц в собственной мастерской с использованием современного оборудования и ручной работы мастеров.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Монтаж</h3>
+                        <p>Установка лестниц "под ключ" с гарантией качества. Мы берем на себя все этапы: от доставки материалов до финишной отделки.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Материалы -->
+    <section class="section materials" id="materials">
+        <div class="wood-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Материалы</h2>
+            <div class="materials-content">
+                <div class="material-item">
+                    <i class="fas fa-tree material-icon"></i>
+                    <h3>Натуральное дерево</h3>
+                    <p>Работаем с дубом, ясенем, буком, сосной. Используем только качественную, хорошо просушенную древесину.</p>
+                </div>
+                
+                <div class="material-item">
+                    <i class="fas fa-industry material-icon"></i>
+                    <h3>Металл</h3>
+                    <p>Нержавеющая сталь, алюминий, кованые элементы. Современная обработка и защитные покрытия.</p>
+                </div>
+                
+                <div class="material-item">
+                    <i class="fas fa-glass-whiskey material-icon"></i>
+                    <h3>Стекло и комбинации</h3>
+                    <p>Закаленное стекло, комбинированные конструкции (дерево+металл, дерево+стекло).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ГАЛЕРЕЯ - ВСТАВЬТЕ ВАШИ ФОТО ЗДЕСЬ ↓↓↓ -->
+    <section class="section" id="gallery">
+    <div class="container">
+        <h2 class="section-title">Наши работы</h2>
+        
+        <!-- Первый ряд: 3 обычные фотографии -->
+        <div class="gallery-row">
+            <!-- ФОТО 1 -->
+            <div class="gallery-item" data-index="0" 
+                 data-src="images/photo2.png" 
+                 data-title="Лестница на металлокаркасе, облицованная деревом" 
+                 data-description="Индивидуальный проект для загородного дома">
+                <img src="images/photo2.png" alt="Лестница на металлокаркасе, облицованная деревом" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>Лестница на металлокаркасе, облицованная деревом</h3>
+                    <p>Индивидуальный проект для загородного дома</p>
+                </div>
+            </div>
+            
+            <!-- ФОТО 2 -->
+            <div class="gallery-item" data-index="1" 
+                 data-src="images/photo4.jpg" 
+                 data-title="Облицовка деревом бетонных лестниц" 
+                 data-description="Современный дизайн пространства">
+                <img src="images/photo4.jpg" alt="Металлическая лестница с стеклянными ограждениями" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>Облицовка деревом бетонных лестниц</h3>
+                    <p>Современный дизайн пространства</p>
+                </div>
+            </div>
+            
+            <!-- ФОТО 3 -->
+            <div class="gallery-item" data-index="2" 
+                 data-src="images/photo5.jpg" 
+                 data-title="Обшиваем ваш металлокаркас" 
+                 data-description="Создадим индивидуальность пространства">
+                <img src="images/photo5.jpg" alt="Комбинированная лестница дерево и металл" class="gallery-img">
+                <div class="gallery-overlay">
+                    <h3>Обшиваем ваш металлокаркас</h3>
+                    <p>Создадим индивидуальность пространства</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ... остальная часть кода ... -->
+    </div>
+</section>
+            
+            <!-- Карточка сравнения - простой вариант -->
+            <div class="comparison-section">
+                <h3 class="comparison-title">
+                    <i class="fas fa-cogs"></i> От 3D моделирования к итоговому изделию
+                </h3>
+                <p class="comparison-subtitle">Сравните 3D визуализацию и готовый результат</p>
+                
+                <div class="simple-comparison">
+                    <!-- Слева: 3D модель -->
+                    <div class="comparison-column">
+                        <div class="comparison-header">
+                            <span class="comparison-icon">
+                                <i class="fas fa-desktop"></i>
+                            </span>
+                            <h4>3D модель</h4>
+                        </div>
+                        <div class="comparison-image-box">
+                            <!-- ЗАМЕНИТЕ НА ССЫЛКУ НА 3D МОДЕЛЬ -->
+                            <img src="images/3D.jpg" alt="3D модель лестницы" class="comparison-img">
+                            <div class="image-label">Проект</div>
+                        </div>
+                        <div class="comparison-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Точная визуализация</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Возможность корректировок</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Просмотр со всех ракурсов</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Стрелка между колонками -->
+                    <div class="comparison-arrow">
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                        <div class="arrow-text">Реализация</div>
+                    </div>
+                    
+                    <!-- Справа: Готовое изделие -->
+                    <div class="comparison-column">
+                        <div class="comparison-header">
+                            <span class="comparison-icon">
+                                <i class="fas fa-hammer"></i>
+                            </span>
+                            <h4>Готовое изделие</h4>
+                        </div>
+                        <div class="comparison-image-box">
+                            <!-- ЗАМЕНИТЕ НА ССЫЛКУ НА ГОТОВУЮ ЛЕСТНИЦУ -->
+                            <img src="images/result.jpg" alt="Готовая лестница" class="comparison-img">
+                            <div class="image-label">Результат</div>
+                        </div>
+                        <div class="comparison-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Натуральные материалы</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Качественная сборка</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Точное соответствие проекту</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="comparison-footer">
+                    <p>Мы создаем точные 3D модели перед изготовлением, чтобы вы могли увидеть будущую лестницу до начала работ</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- ГАЛЕРЕЯ - КОНЕЦ ЗОНЫ ДЛЯ ВСТАВКИ ФОТО ↑↑↑ -->
+    
+    <!-- Контакты -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Оставить заявку</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Ваше имя *</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон *</label>
+                    <input type="tel" id="phone" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Опишите ваш проект</label>
+                    <textarea id="message" class="form-control" placeholder="Тип лестницы, материалы, размеры помещения..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary submit-btn">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Дубовая Роща</h3>
+                    <p>Проектирование и изготовление лестниц из дерева и металла. Индивидуальный подход, качественные материалы, гарантия на работы.</p>
+                    <div class="social-icons">
+                        <a href="images/vk.png" class="social-icon" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
+                        <a href="images/tg.png" class="social-icon" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Барнаул</p>
+                    <p><i class="fas fa-phone"></i> +7 (961) 993-45-42</p>
+                    <p><i class="fas fa-envelope"></i> vagonov39@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Пн-Пт: 9:00-19:00, Сб: 10:00-16:00</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Быстрые ссылки</h3>
+                    <a href="#home">Главная</a>
+                    <a href="#about">О нас</a>
+                    <a href="#services">Услуги</a>
+                    <a href="#materials">Материалы</a>
+                    <a href="#gallery">Галерея</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+            </div>
+            <div class="gallery-modal" id="galleryModal">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть">
+        <i class="fas fa-times"></i>
+    </button>
+    <button class="modal-nav modal-prev" id="modalPrev" aria-label="Предыдущее изображение">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="modal-nav modal-next" id="modalNext" aria-label="Следующее изображение">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="modal-content">
+        <img class="modal-image" id="modalImage" src="" alt="">
+        <div class="modal-info">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+</div>
+            <div class="copyright">
+                <p>&copy; 2025 "Дубовая Роща". Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
